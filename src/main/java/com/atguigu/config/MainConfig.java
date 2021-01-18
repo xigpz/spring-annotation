@@ -13,8 +13,8 @@ import org.springframework.stereotype.Service;
 import com.atguigu.bean.Person;
 import com.atguigu.service.BookService;
 
-//ÅäÖÃÀà==ÅäÖÃÀà
-@Configuration //¸æËßSpringÕâÊÇÒ»¸öÅäÖÃÀà
+//é…ç½®ç±»==é…ç½®ç±»
+@Configuration //å‘Šè¯‰Springè¿™æ˜¯ä¸€ä¸ªé…ç½®ç±»
 @ComponentScans(value = {
 		@ComponentScan(value = "com.atguigu",includeFilters = {
 				/*
@@ -25,19 +25,19 @@ import com.atguigu.service.BookService;
 				@Filter(type = FilterType.CUSTOM,classes = MyTypeFilter.class)
 		},useDefaultFilters = false)
 })
-//@ConponentScan value:Ö¸¶¨ÒªÉ¨ÃèµÄÂ·¾¶
-//excludeFilters = Filter[],Ö¸¶¨É¨ÃèµÄÊ±ºò°´ÕÕÊ²Ã´¹æÔòÅÅ³ıÄÇĞ©×é¼ş
-//includeFilters = Filter[],Ö¸¶¨É¨ÃèµÄÊ±ºòÖ»ĞèÒª°üº¬ÄÄĞ©×é¼ş
-//FilterType.ANNOTATION,°´ÕÕ×¢½â
-//FilterType.ASSIGNABLE_TYPE,°´ÕÕ¸ø¶¨µÄÀàĞÍ
-//FilterType.ASPECTJ,Ê¹ÓÃASPECTJ±í´ïÊ½
-//FilterType.REGEX Ê¹ÓÃÕıÔò±í´ïÊ½
-//FilterType.CUSTOM,Ê¹ÓÃ×Ô¶¨Òå¹æÔò
+//@ConponentScan value:æŒ‡å®šè¦æ‰«æçš„è·¯å¾„
+//excludeFilters = Filter[],æŒ‡å®šæ‰«æçš„æ—¶å€™æŒ‰ç…§ä»€ä¹ˆè§„åˆ™æ’é™¤é‚£äº›ç»„ä»¶
+//includeFilters = Filter[],æŒ‡å®šæ‰«æçš„æ—¶å€™åªéœ€è¦åŒ…å«å“ªäº›ç»„ä»¶
+//FilterType.ANNOTATION,æŒ‰ç…§æ³¨è§£
+//FilterType.ASSIGNABLE_TYPE,æŒ‰ç…§ç»™å®šçš„ç±»å‹
+//FilterType.ASPECTJ,ä½¿ç”¨ASPECTJè¡¨è¾¾å¼
+//FilterType.REGEX ä½¿ç”¨æ­£åˆ™è¡¨è¾¾å¼
+//FilterType.CUSTOM,ä½¿ç”¨è‡ªå®šä¹‰è§„åˆ™
 public class MainConfig {
-	//¸øÈİÆ÷ÖĞ×¢²áÒ»¸öBean;ÀàĞÍÎª·µ»ØÖµµÄÀàĞÍ£¬idÄ¬ÈÏÊÇÓÃ·½·¨Ãû×÷Îªid
+	//ç»™å®¹å™¨ä¸­æ³¨å†Œä¸€ä¸ªBean;ç±»å‹ä¸ºè¿”å›å€¼çš„ç±»å‹ï¼Œidé»˜è®¤æ˜¯ç”¨æ–¹æ³•åä½œä¸ºid
 	@Bean("person")
 	public Person person01() {
-		return new Person(20,"ÀîËÄ");
+		return new Person(20,"æå››");
 	}
 	
 	
